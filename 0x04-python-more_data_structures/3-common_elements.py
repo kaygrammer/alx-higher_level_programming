@@ -2,6 +2,6 @@
 
 
 def common_elements(set_1, set_2):
-    """return common element"""
+    """return common element in the given sets"""
     common_elements = set_1 & set_2
     return common_elements
