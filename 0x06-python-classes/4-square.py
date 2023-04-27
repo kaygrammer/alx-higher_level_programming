@@ -1,31 +1,27 @@
 #!/usr/bin/python3
 
-"""an empty class that represent a square class"""
-
 
 class Square:
-    """initialize a private instance and public method"""
+    """Repesent a Square"""
     def __init__(self, size=0):
-        """
+        """Initialize the square.
         Args:
-        size: size of the integer
-        Area: Area of a square
+        size(int): The size of the new square
         """
-        self.__size = size
+        self.size = size
 
-        """size setter"""
-        @property
-        def size(self):
-            return self.__size
+    @property
+    def size(self):
+        return (self.__size)
 
-        """size setter"""
-        @size.setter
-        def size(self, value):
-            if type(size) is not int:
-                raise TypeError("size must be an integer")
-            elif size < 0:
-                raise ValueError("size must be >= 0")
-            self.__size = value
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
     def area(self):
-        return (self.__size ** 2)
+        """Return the current Area"""
+        return (self.__size * 2)
