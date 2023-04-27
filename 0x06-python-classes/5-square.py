@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+
+"""a class Square that defines a square"""
+
+
 class Square:
     def __init__(self, size=0):
         self.__size = size
@@ -13,11 +18,11 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-    
+
     @property
     def size(self):
         return self.__size
-    
+
     @size.getter
     def size(self, value):
         if not isinstance(value, int):
@@ -25,4 +30,4 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = value   
+            self.__size = value
