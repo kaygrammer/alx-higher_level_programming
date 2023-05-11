@@ -16,7 +16,10 @@ def board_deepcopy(board):
 
 def get_solution(board):
     """Return the list of lists representation of a solved chessboard."""
-    return [[r, c] for r, row in enumerate(board) for c, val in enumerate(row) if val == "Q"]
+    return [[r, c]
+            for r, row in enumerate(board)
+            for c, val in enumerate(row)
+            if val == "Q"]
 
 
 def mark_attacked_spots(board, row, col):
@@ -68,7 +71,10 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             mark_attacked_spots(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
+            solutions = recursive_solve(tmp_board,
+                                        row + 1,
+                                        queens + 1,
+                                        solutions)
 
     return solutions
 
