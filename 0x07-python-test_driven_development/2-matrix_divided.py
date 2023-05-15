@@ -1,6 +1,6 @@
-#!/usr//bin/python3
+#!/usr/bin/python3
 
-"""Defines a function that divides element of a matrix"""
+"""a function that divides all elements of a matrix"""
 
 
 def matrix_divided(matrix, div):
@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: division by zero
 
     Returns:
-       a new matrix
+        a new matrix
     """
     if not all(isinstance(i, (int, float)) for j in matrix for i in j):
         raise TypeError(
