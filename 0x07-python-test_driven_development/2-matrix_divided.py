@@ -1,25 +1,27 @@
-#!/usr/bin/python3
+#!/usr//bin/python3
 
-"""a function that divides all elements of a matrix"""
+"""Defines a function that divides element of a matrix"""
+
 
 def matrix_divided(matrix, div):
     """Divide all elements of a matrix
-    
+
     Args:
         matrix (a list): the dividend
         div: the divisor
-    
+
     Raises:
         TypeError: matrix must be a matrix (list of lists) of integers/floats
         TypeError: Each row of the matrix must have the same size
         TypeError: div must be a number
         ZeroDivisionError: division by zero
-    
+
     Returns:
-        a new matrix 
+       a new matrix
     """
     if not all(isinstance(i, (int, float)) for j in matrix for i in j):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
 
     if not all(len(i) == len(matrix[0]) for i in matrix):
         raise TypeError("Each row of the matrix must have the same size")
