@@ -1,5 +1,7 @@
 #!/usr//bin/python3
 
+"""Defines a function that divides element of a matrix"""
+
 
 def matrix_divided(matrix, div):
     """
